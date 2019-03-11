@@ -9,6 +9,10 @@
     <h2>Login</h2>
     <hr>
 
+   
+    <a href="#">Register</a>
+    <hr>
+
     @if($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -36,6 +40,7 @@
         </div>
 
         <button type="submit" class="btn btn-primary">Login</button>
+        <hr><a href="#">Forget Password?</a>
 
     </form>
 

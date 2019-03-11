@@ -25,3 +25,9 @@
 
     // User
     Route::get('/user','UserController@index');
+    
+
+
+    Route::get('/register', function(){
+        return view('session.register');
+    })->name('register');
