@@ -6,6 +6,9 @@
     // Clients
     Route::resource('clients','ClientsController');
     Route::get('/clients/data','ClientsController@data')->name('clients.data');
+   
+    //Registration
+    Route::view('/registration','registration.create');
 
     // Rooms
     Route::resource('rooms','RoomController');
