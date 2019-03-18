@@ -31,3 +31,6 @@
     Route::get('/register', function(){
         return view('session.register');
     })->name('register');
+	
+	// Email related routes
+	Route::get('mail/send', 'MailController@send');

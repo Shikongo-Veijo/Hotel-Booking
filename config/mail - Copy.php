@@ -16,9 +16,7 @@ return [
     |
     */
 
-    //'driver' => env('MAIL_DRIVER', 'smtp'),
-        
-		'driver' => 'sendmail',
+    'driver' => env('MAIL_DRIVER', 'smtp'),
 
     /*
     |--------------------------------------------------------------------------
@@ -31,7 +29,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.gmail.com'),
+    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
 
     /*
     |--------------------------------------------------------------------------
@@ -58,7 +56,7 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'larahotelbooking@gmail.com'),
+        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
         'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
 
@@ -86,12 +84,8 @@ return [
     |
     */
 
-    /*'postmaster@sandbox20e3dee647884327b39f51fcb871f5f4.mailgun.org' => env('MAIL_USERNAME'),
+    'username' => env('MAIL_USERNAME'),
 
-    '12345' => env('MAIL_PASSWORD'),*/
-	
-	    'username' => env('MAIL_USERNAME'),
- 
     'password' => env('MAIL_PASSWORD'),
 
     /*
@@ -105,9 +99,7 @@ return [
     |
     */
 
-    // 'sendmail' => '/usr/sbin/sendmail -bs',
-    'sendmail' => 'C:\xampp\htdocs\Hotel-Booking\vendor\sendmail.exe -bs',
-	
+    'sendmail' => '/usr/sbin/sendmail -bs',
 
     /*
     |--------------------------------------------------------------------------
