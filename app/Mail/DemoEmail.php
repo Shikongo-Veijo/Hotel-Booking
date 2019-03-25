@@ -37,8 +37,8 @@ class DemoEmail extends Mailable
     {
         // return $this->from('sender@example.com')
         return $this->from('Larahotelbooking@gmail.com')
-                    ->view('mails.demo')
-                    ->text('mails.demo_plain')
+                    ->view('mails.bookingConfirmation')
+                    ->text('mails.bookingConfirmation')
                     ->with(
                       [
                             'testVarOne' => '1',

@@ -29,7 +29,7 @@ class PagesController extends Controller {
 	}
 
 	public function getContact() {
-		return view('mails.contact');
+		return view('pages.contact');
 	}
 
 	public function postContact(Request $request) {
@@ -44,10 +44,16 @@ class PagesController extends Controller {
 			'bodyMessage' => $request->message
 			);
 
-		Mail::send('emails.contact', $data, function($message) use ($data){
+/*		Mail::send('mails.contact', $data, function($message) use ($data){
 			$message->from($data['email']);
-			$message->to('hello@devmarketer.io');
-			$message->subject($data['subject']);
+			$message->to('kingalbertus@gmail.com');
+			$message->subject($data['subject']);*/
+
+
+            Mail::send('mails.contact', $data, function($message) use ($data){
+                $message->from('Larahotelbooking@gmail.com');
+                $message->to('kingalbertus@gmail.com');
+                $message->subject('Booking');
 		});
 
 		Session::flash('success', 'Your Email was Sent!');

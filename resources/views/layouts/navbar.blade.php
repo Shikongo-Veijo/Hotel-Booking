@@ -41,7 +41,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="fa fa-calendar"></span> Email <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="/mails/contact"><i ></i> Send Email</a></li>
+                        <li><a href="/contact"><i ></i> Send Email</a></li>
                         <li><a href="/contact"><i> </i> View Emails</a></li>
                         <li><a href="/mails/contact"><i class="fa fa-calendar-check-o"></i> WIP</a></li>
                     </ul>
