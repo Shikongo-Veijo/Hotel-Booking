@@ -7,6 +7,7 @@ use App\CanceledBooking;
 use App\Client;
 use App\Room;
 use Illuminate\Http\Request;
+use Mail;
 
 class BookingController extends Controller
 {
@@ -53,6 +54,22 @@ class BookingController extends Controller
         $room = Room::find($request->room_id);
         $room->status = 0;
         $room->save();
+
+
+        //Send Confirmation Email
+        $data = array(
+            'email' => $request->email,
+            'subject' => $request->subject,
+            'bodyMessage' => $request->message
+        );
+
+
+
+        Mail::send('mails.contact', $data, function($message) use ($data){
+            $message->from('Larahotelbooking@gmail.com');
+            $message->to('kingalbertus@gmail.com');
+            $message->subject('Booking');
+        });
 
         session()->flash('msg', 'The Room Has been booked');
 
