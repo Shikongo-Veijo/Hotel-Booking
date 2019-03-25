@@ -37,3 +37,8 @@
 	
 	// Email related routes
 	Route::get('mail/send', 'MailController@send');
+
+	//Contact Us Form
+   Route::get('contact', 'PagesController@getContact');
+   Route::post('contact', 'PagesController@postContact');
+
