@@ -29,7 +29,7 @@ class PagesController extends Controller {
 	}
 
 	public function getContact() {
-		return view('pages.contact');
+		return view('mails.contact');
 	}
 
 	public function postContact(Request $request) {
