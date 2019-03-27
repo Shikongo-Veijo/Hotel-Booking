@@ -179,6 +179,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+		//App\Providers\Gloudemans\Calendar\CalendarServiceProvider::class, /*added */
 
 
     ],
@@ -233,6 +234,7 @@ return [
         'Html' => Collective\Html\HtmlFacade::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
         'Datatables' => Yajra\Datatables\Facades\Datatables::class,
+	//	'Calendar'     => Gloudemans\Calendar\Facades\Calendar::class, //added
 
     ],
 
