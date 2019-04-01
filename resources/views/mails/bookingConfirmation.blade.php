@@ -1,4 +1,4 @@
-Hello <i>{{ $demo->receiver }}</i>,
+Hello <i>{{ $data->email }}</i>,
 <p>Hello World: This is a booking Confirmation Email.</p>
  
 <p><u>Demo object values:</u></p>
@@ -17,4 +17,4 @@ Hello <i>{{ $demo->receiver }}</i>,
  
 Thank You,
 <br/>
-<i>{{ $demo->sender }}</i>
+<i>{{ $data->sender }}</i>
