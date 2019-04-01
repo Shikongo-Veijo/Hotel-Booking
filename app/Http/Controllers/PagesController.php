@@ -7,7 +7,9 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Post;
 use Mail;
+use mails;
 use Session;
+use App\Mail\DemoEmail;
 
 class PagesController extends Controller {
 
@@ -50,11 +52,18 @@ class PagesController extends Controller {
 			$message->subject($data['subject']);*/
 
 
-            Mail::send('mails.contact', $data, function($message) use ($data){
-                $message->from('Larahotelbooking@gmail.com');
-                $message->to('kingalbertus@gmail.com');
-                $message->subject('Booking');
-		});
+        Mail::send('mails.confirm', $data, function($message) use ($data){
+            $message->from('Larahotelbooking@gmail.com');
+            $message->to($data['email']);
+            $message->subject('Booking');
+        });
+
+
+//        Mail::send('mails.bookingConfirmation', $data, function($message) use ($data){
+//            $message->from('Larahotelbooking@gmail.com');
+//            $message->to($data['email']);
+//            $message->subject('Booking');
+//        });
 
 		Session::flash('success', 'Your Email was Sent!');
 

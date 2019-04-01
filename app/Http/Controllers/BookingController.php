@@ -97,6 +97,25 @@ class BookingController extends Controller
         $booking->update($request->all());
         $request->session()->flash('msg', 'Booking has been updated');
         return redirect('/booking');
+
+        //Send Update Email
+        $data = array(
+            'email' => $request->email,
+            'subject' => $request->subject,
+            'bodyMessage' => $request->message
+        );
+
+
+
+        Mail::send('mails.bupdate', $data, function($message) use ($data) {
+            $message->from('Larahotelbooking@gmail.com');
+            $message->to('kingalbertus@gmail.com');
+            $message->subject('Update');
+        }
+
+
+
+
     }
 
     public function destroy(Request $request, Booking $booking)
@@ -104,10 +123,29 @@ class BookingController extends Controller
         Booking::destroy($booking->id);
         $request->session()->flash('msg', 'Booking has been deleted');
         return redirect('booking');
+
+
+
+        //Send delete Email
+        $data = array(
+            'email' => $request->email,
+            'subject' => $request->subject,
+            'bodyMessage' => $request->message
+        );
+
+
+
+        Mail::send('mails.bdelete', $data, function($message) use ($data) {
+            $message->from('Larahotelbooking@gmail.com');
+            $message->to('kingalbertus@gmail.com');
+            $message->subject('Delete');
+        }
+
     }
 
     public function cancel($room_id, $booking_id) {
-        $booking = Booking::find($booking_id);
+      
+	  $booking = Booking::find($booking_id);
         $room = Room::find($room_id);
         $booking->status = 0;
         $booking->user_id = auth()->id();
