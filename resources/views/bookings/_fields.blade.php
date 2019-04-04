@@ -2,21 +2,16 @@
 
 
   <form action="" method="post">
-      <input type="hidden" name="_token" value="qbuQgVOYJ0tkLX6OPq5gYGJXqPG0Pke7VfuRXF53">
-     <!-- <div class="medium-1  columns">FROM:</div>
-      <div class="medium-2  columns"><input name="dateFrom" value="" type="text" class="datepicker" /></div>
-	  -->
+     <!-- <input type="hidden" name="_token" value="qbuQgVOYJ0tkLX6OPq5gYGJXqPG0Pke7VfuRXF53"> -->
+    
 	  
 	<div class="form-group {{ $errors->has('start_date') ? 'has-error' : '' }}">
-    {!! Form::label('dateFromFrom','Check In') !!}
+    {!! Form::label('dateFrom','Check In') !!}
     {!! Form::date('From', $booking->From ,['class'=>'form-control datepicker']) !!}
     <span class="text-danger">{{ $errors->has('dateFrom') ? $errors->first('From') : '' }}</span>
 	</div>
 	
-     <!-- <div class="medium-1  columns">TO:</div>
-      <div class="medium-2  columns"><input name="dateTo" value="" type="text" class="datepicker" /></div>-->
-     <!-- <div class="medium-2  columns"><input class="button" type="submit" href="/rooms/" value="SEARCH" /></div>-->
-	 
+    	 
 	 <div class="form-group {{ $errors->has('start_date') ? 'has-error' : '' }}">
     {!! Form::label('dateTo','Check Out') !!}
     {!! Form::date('dateFrom', $booking->dateTo ,['class'=>'form-control datepicker']) !!}
@@ -24,8 +19,7 @@
 	</div>
 	
     <a href="/rooms/"></i> SEARCH AVAILABILITY</a>
-	<!-- <div class="medium-2  columns"><input class="button"  href="/rooms/" type="submit" value = "SEARCH AVAILABILITY"/></div><i class="fa fa-table">-->
-    </form>
+	</form>
 	</br>
 		
 <div class="form-group">

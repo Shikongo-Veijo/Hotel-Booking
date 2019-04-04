@@ -31,7 +31,8 @@ class RoomController extends Controller
             'name' => 'required',
             'floor' => 'required',
             'type' => 'required',
-            'beds' => 'required'
+            'beds' => 'required',
+            'image'=> 'required' //new field
         ]);
 
         Room::create($request->all());
