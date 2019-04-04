@@ -21,6 +21,7 @@
         <thead>
         <tr>
             <th>#ID</th>
+			<th>Picture</th>
             <th>name</th>
             <th>Type</th>
             <th>Floor</th>
@@ -33,10 +34,12 @@
         @foreach ($rooms as $room)
             <tr>
                 <td>{{ $room->id }}</td>
+				<td>{{ $room->image }}</td> <!--added field to display room image-->
                 <td>{{ $room->name }}</td>
                 <td>{{ $room->type }}</td>
                 <td>{{ $room->floor }}</td>
                 <td>{{ $room->beds }}</td>
+				
                 <td>
                     @if ($room->status)
                         <span class="label label-primary">Available</span>

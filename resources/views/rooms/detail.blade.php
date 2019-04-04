@@ -37,6 +37,11 @@
         </tr>
 
         <tr>
+            <th>Picture</th>
+            <td>{{ $room->image }}</td> <!--added field-->
+        </tr>
+
+        <tr>
             <th>Registered At</th>
             <td>{{ $room->created_at->diffForHumans() }}</td>
         </tr>

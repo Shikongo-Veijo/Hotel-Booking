@@ -37,3 +37,15 @@
 	
 	// Email related routes
 	Route::get('mail/send', 'MailController@send');
+	
+	
+
+
+Route::get('/welcome', function () {
+    return view('welcome');
+});
+
+Route::get('/uploadfile', 'UploadfileController@index');
+Route::post('/uploadfile', 'UploadfileController@upload');
+
+?>
