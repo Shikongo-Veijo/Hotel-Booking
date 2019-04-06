@@ -15,7 +15,6 @@ class CreateRoomsTable extends Migration
             $table->string('floor');
             $table->string('type');
             $table->string('beds');
-            $table->string('price');
             $table->boolean('status')->default('1');
             $table->timestamps();
         });
