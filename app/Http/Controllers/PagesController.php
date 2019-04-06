@@ -52,7 +52,7 @@ class PagesController extends Controller {
 			$message->subject($data['subject']);*/
 
 
-        Mail::send('mails.confirm', $data, function($message) use ($data){
+        Mail::send('mails.bConfirm', $data, function($message) use ($data){
             $message->from('Larahotelbooking@gmail.com');
             $message->to($data['email']);
             $message->subject('Booking');

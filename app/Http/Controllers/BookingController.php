@@ -111,7 +111,7 @@ class BookingController extends Controller
             $message->from('Larahotelbooking@gmail.com');
             $message->to('kingalbertus@gmail.com');
             $message->subject('Update');
-        }
+        });
 
 
 
@@ -139,7 +139,7 @@ class BookingController extends Controller
             $message->from('Larahotelbooking@gmail.com');
             $message->to('kingalbertus@gmail.com');
             $message->subject('Delete');
-        }
+        });
 
     }
 
