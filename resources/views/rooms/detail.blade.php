@@ -37,6 +37,11 @@
         </tr>
 
         <tr>
+            <th>Price</th>
+            <td>{{ $room->price }}</td>
+        </tr>
+
+        <tr>
             <th>Registered At</th>
             <td>{{ $room->created_at->diffForHumans() }}</td>
         </tr>

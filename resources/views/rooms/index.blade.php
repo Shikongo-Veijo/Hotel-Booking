@@ -38,7 +38,7 @@
                 <td>{{ $room->type }}</td>
                 <td>{{ $room->floor }}</td>
                 <td>{{ $room->beds }}</td>
-                <td>{{ $room->Price}}</td>
+                <td>{{ $room->price }}</td>
                 <td>
                     @if ($room->status)
                         <span class="label label-primary">Available</span>
