@@ -62,6 +62,21 @@ class RoomController extends Controller
             'type' => 'required',
             'beds' => 'required'
         ]);
+		
+		 // Check if there is any image,
+        if ($request->hasFile('image')) {
+            // Check if file exists
+            if (file_exists(public_path('uploads/') . $client->image)) {
+                // Delete an old image
+                unlink(public_path('uploads/') . $client->image);
+            }
+
+            // Get and Upload new image
+            $image = $request->image;
+            $image->move("uploads", $image->getClientOriginalName());
+
+            $client->image = $request->image->getClientOriginalName();
+        }
 
         $room = Room::find($id);
         $room->update($request->all());

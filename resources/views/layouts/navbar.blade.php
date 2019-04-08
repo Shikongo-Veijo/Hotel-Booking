@@ -38,6 +38,8 @@
                         <li><a href="/bookings/canceled"><i class="fa fa-calendar-check-o"></i> Canceled Bookings</a></li>
                     </ul>
                 </li>
+<!--a link to the calendar-->
+                <li><a href="/event"><i class="fa fa-calendar-plus-o"></i> Events Calendar</a></li>
             </ul>
 
             @yield('search')

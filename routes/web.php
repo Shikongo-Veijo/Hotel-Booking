@@ -47,5 +47,10 @@ Route::get('/welcome', function () {
 
 Route::get('/uploadfile', 'UploadfileController@index');
 Route::post('/uploadfile', 'UploadfileController@upload');
+//routes for the event controller
+Route::get('event/add','EventController@createEvent');
+Route::post('event/add','EventController@store');
+Route::get('event','EventController@calendar');
+
 
 ?>
