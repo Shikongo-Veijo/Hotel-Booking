@@ -18,7 +18,7 @@
                             <i class="fa fa-users fa-5x"></i>
                         </div>
                         <div class="col-xs-9 text-right">
-                            <div class="huge">{{ $client->count() }}</div>
+                            <div class="huge">{{ $admin->count() }}</div>
                             <div>Total Clients</div>
                         </div>
                     </div>

@@ -1,5 +1,5 @@
 <?php
-
+/*
     // Dashboard
     Route::resource('/','DashboardController');
 
@@ -27,7 +27,7 @@
     Route::get('/logout','SessionsController@destroy');
 
     // User
-    Route::get('/user','UserController@index');
+    Route::get('/user','UserController@index');*/
     
 
 
@@ -39,7 +39,7 @@
     Route::get('mail/send', 'MailController@send');
     
 
-    Route::view('/', 'welcome');
+    //Route::view('/', 'welcome');
     Auth::routes();
 
     Route::get('/login/admin', 'Auth\LoginController@showAdminLoginForm');
@@ -48,12 +48,11 @@
     Route::get('/register/writer', 'Auth\RegisterController@showWriterRegisterForm');
 
     Route::post('/login/admin', 'Auth\LoginController@adminLogin');
+    Route::resource('/','DashboardController');
     Route::post('/login/writer', 'Auth\LoginController@writerLogin');
     Route::post('/register/admin', 'Auth\RegisterController@createAdmin');
     Route::post('/register/writer', 'Auth\RegisterController@createWriter');
 
-    Route::get('/logout','Auth\LoginController@showAdminLoginForm');
-
-    Route::view('/home', 'home')->middleware('auth');
-    Route::view('/admin', 'admin');
+    Route::view('/', 'DashboardController')->middleware('auth');
+    Route::view('/dashboard', 'dashboard');
     Route::view('/writer', 'writer');

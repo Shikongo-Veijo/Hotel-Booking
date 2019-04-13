@@ -43,6 +43,19 @@
                                 @endif
                             </div>
                         </div>
+                        <div class="form-group row">
+                            <label for="phonenumber" class="col-md-4 col-form-label text-md-right">{{ __('Phonenumber') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="phonenumber" type="numeric" class="form-control{{ $errors->has('phonenumber') ? ' is-invalid' : '' }}" name="password" required>
+
+                                @if ($errors->has('phonenumber'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('phonenumber') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
 
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
