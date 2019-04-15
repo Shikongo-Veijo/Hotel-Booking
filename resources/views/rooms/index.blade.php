@@ -34,7 +34,13 @@
         @foreach ($rooms as $room)
             <tr>
                 <td>{{ $room->id }}</td>
-				<td>{{ $room->image }}</td> <!--added field to display room image-->
+				<!--<td>{{ $room->image }}-->
+                <td> @if($room->image)
+                     <img src="{{ url('/uploads').'/'. $room->image }}" width="80px" class="img-thumbnail">
+                    @else
+                    <img src="{{ url('/uploads/defaultroom').'/'. $room->image }}" width="80px" class="img-thumbnail"> <!--default image if no image uploaded by user-->
+                    @endif
+                </td> <!--added field to display room image-->
                 <td>{{ $room->name }}</td>
                 <td>{{ $room->type }}</td>
                 <td>{{ $room->floor }}</td>
@@ -56,6 +62,6 @@
                 </td>
             </tr>
         </tbody>
-        @endforeach
+       @endforeach
     </table>
 @endsection
