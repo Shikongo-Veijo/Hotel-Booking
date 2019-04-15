@@ -24,14 +24,9 @@ class DashboardController extends Controller
         $room = new Room();
         $booking  = new Booking();
         $calendar = new EventController();
-      //  $name = new name();
         return view('dashboard', compact('client','room','booking','calendar'));
     }
 
-  
-   
-    
- 
     public function create()
     {
         //
