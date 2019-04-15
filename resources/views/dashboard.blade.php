@@ -11,7 +11,7 @@
 
     <div class="row">
         <div class="col-lg-4 col-md-4">
-            <div class="panel panel-info">
+            <div class="panel panel-primary">
                 <div class="panel-heading">
                     <div class="row">
                         <div class="col-xs-3">
@@ -34,7 +34,7 @@
         </div>
 
         <div class="col-lg-4 col-md-4">
-            <div class="panel panel-info">
+            <div class="panel panel-primary">
                 <div class="panel-heading">
                     <div class="row">
                         <div class="col-xs-3">
@@ -57,7 +57,7 @@
         </div>
       
         <div class="col-lg-4 col-md-4">
-            <div class="panel panel-info">
+            <div class="panel panel-primary">
                 <div class="panel-heading">
                     <div class="row">
                         <div class="col-xs-3">
@@ -80,7 +80,7 @@
         </div>
 
         <div class="col-lg-4 col-md-4">
-            <div class="panel panel-info">
+            <div class="panel panel-primary">
                 <div class="panel-heading">
                     <div class="row">
                         <div class="col-xs-3">
@@ -104,7 +104,7 @@
 
         <!-- New Counter -->
         <div class="col-lg-4 col-md-4">
-            <div class="panel panel-success">
+            <div class="panel panel-primary">
                 <div class="panel-heading">
                     <div class="row">
                         <div class="col-xs-2">
@@ -122,13 +122,27 @@
                             <div class="huge">{{ $room->where('name', "triple" )->count() }} Triple Room(s)</div>
                         </div>
 
-                        <div class="col-xs-5 text-right">
+                        <div class="col-xs-5 text-center">
                             <div class="huge">{{ $room->where('name', "quad" )->count() }} Quad Room(s)</div>
+                        </div>
+                        <div class="col-xs-5 text-center">
+                            <div class="huge">{{ $room->where('name', "king" )->count() }} King Room(s)</div>
+                        </div>
+                        <div class="col-xs-5 text-center">
+                            <div class="huge">{{ $room->where('name', "deluxe" )->count() }} Deluxe Room(s)</div>
                         </div>
                     </div>
                 </div>
                
+                <a href="/rooms">
+                    <div class="panel-footer">
+                        <span class="pull-left">View Details</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
             </div>
+            
         </div>
         <!-- End of new counter -->
     </div>
