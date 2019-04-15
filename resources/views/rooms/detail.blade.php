@@ -38,7 +38,7 @@
 
         <tr>
             <th>Picture</th>
-            <td>{{ $room->image }}</td> <!--added field-->
+            <td><img src="uploads/{{ $room->image }}" /></td> <!--added field-->
         </tr>
 
         <tr>
