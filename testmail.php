@@ -1,3 +1,3 @@
 <?php
-mail("kingalbertus@gmail.com","Subject","Email message","From: username@gmail.com");
+mail("kingalbertus@gmail.com","Subject","Email message","kingalbertus@gmail.com");
 ?>

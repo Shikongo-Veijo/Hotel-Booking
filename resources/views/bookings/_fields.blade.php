@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -22,6 +23,8 @@
 	</form>
 	</br>
 		
+=======
+>>>>>>> master
 <div class="form-group">
     {!! Form::label('name','Client:') !!}
     <select class="selectpicker form-control" data-live-search="true" title="" name="client_id">

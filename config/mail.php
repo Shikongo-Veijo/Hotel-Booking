@@ -18,7 +18,9 @@ return [
 
     //'driver' => env('MAIL_DRIVER', 'smtp'),
         
-		'driver' => 'sendmail',
+		//'driver' => 'sendmail',
+		'driver' => 'smtp',
+		//'driver' => 'log',
 
     /*
     |--------------------------------------------------------------------------
@@ -105,8 +107,8 @@ return [
     |
     */
 
-    // 'sendmail' => '/usr/sbin/sendmail -bs',
-    'sendmail' => 'C:\xampp\htdocs\Hotel-Booking\vendor\sendmail.exe -bs',
+    'sendmail' => '/usr/sbin/sendmail -bs',
+    //'sendmail' => 'C:\xampp\htdocs\Hotel-Booking\vendor\sendmail.exe -bs',
 	
 
     /*
