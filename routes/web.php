@@ -54,3 +54,8 @@ Route::get('event','EventController@calendar');
 
 
 ?>
+
+	//Contact Us Form
+   Route::get('contact', 'PagesController@getContact');
+   Route::post('contact', 'PagesController@postContact');
+

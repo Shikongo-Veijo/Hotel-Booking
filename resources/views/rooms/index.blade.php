@@ -26,6 +26,7 @@
             <th>Type</th>
             <th>Floor</th>
             <th>Beds</th>
+            <th>Price</th>
             <th>Status</th>
             <th>Action</th>
         </tr>
@@ -46,6 +47,7 @@
                 <td>{{ $room->floor }}</td>
                 <td>{{ $room->beds }}</td>
 				
+                <td>{{ $room->price }}</td>
                 <td>
                     @if ($room->status)
                         <span class="label label-primary">Available</span>
