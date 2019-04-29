@@ -37,10 +37,14 @@
         </tr>
 
         <tr>
+        <th>Price</th>
+            <td>{{ $room->price }}</td>
+        </td>
+
+        <tr>
             <th>Picture</th>
             <td><img src="uploads/{{ $room->image }}" /></td> <!--added field-->
-            <th>Price</th>
-            <td>{{ $room->price }}</td>
+            
         </tr>
 
         <tr>

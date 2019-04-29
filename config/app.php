@@ -233,11 +233,8 @@ return [
         'Html' => Collective\Html\HtmlFacade::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
         'Datatables' => Yajra\Datatables\Facades\Datatables::class,
-<<<<<<< HEAD
-	//	'Calendar'     => Gloudemans\Calendar\Facades\Calendar::class, //added
-		'Calendar' => MaddHatter\LaravelFullcalendar\Facades\Calendar::class,
-=======
->>>>>>> master
+
+
 
     ],
 

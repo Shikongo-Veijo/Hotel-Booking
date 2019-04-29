@@ -22,6 +22,13 @@
     <span class="text-danger">{{ $errors->has('beds') ? $errors->first('beds') : ''  }}</span>
 </div>
 
+
+<div class="form-group {{ $errors->has('price') ? 'has-error' : '' }}">
+    {!! Form::label('price','Price:') !!}
+    {!! Form::text('price',$room->price,['class'=>'form-control']) !!}
+    <span class="text-danger">{{ $errors->has('price') ? $errors->first('price') : ''  }}</span>
+</div>
+
 <div class="form-group">
     {!! Form::label('image','Image:') !!}
     {!! Form::file('image', $room->image, ['class' => 'form-control']) !!}
@@ -32,9 +39,3 @@
    
 </div>
 
-
-<div class="form-group {{ $errors->has('price') ? 'has-error' : '' }}">
-    {!! Form::label('price','Price:') !!}
-    {!! Form::text('price',$room->price,['class'=>'form-control']) !!}
-    <span class="text-danger">{{ $errors->has('price') ? $errors->first('price') : ''  }}</span>
-</div>

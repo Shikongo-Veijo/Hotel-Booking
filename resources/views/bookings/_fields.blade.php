@@ -27,10 +27,3 @@
     <span class="text-danger">{{ $errors->has('end_date') ? $errors->first('end_date') : '' }}</span>
 </div>
 
-<!--<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-    <div class="post">
-    ::before
-    <div class="post-media">
-        @if $room, status,
-
-</div> -->

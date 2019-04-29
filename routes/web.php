@@ -51,11 +51,12 @@ Route::post('/uploadfile', 'UploadfileController@upload');
 Route::get('event/add','EventController@createEvent');
 Route::post('event/add','EventController@store');
 Route::get('event','EventController@calendar');
+//Contact Us Form
+   Route::get('contact', 'PagesController@getContact');
+   Route::post('contact', 'PagesController@postContact');
+
 
 
 ?>
 
-	//Contact Us Form
-   Route::get('contact', 'PagesController@getContact');
-   Route::post('contact', 'PagesController@postContact');
-
+	
