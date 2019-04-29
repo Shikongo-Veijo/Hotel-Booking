@@ -7,6 +7,15 @@
     </select>
 </div>
 <div class="form-group">
+    {!! Form::label('name','Name:') !!}
+    <select class="selectpicker form-control" data-live-search="true" title="" name="client_id">
+        @foreach ($clients as $client)
+            <option data-subtext="{{ $client->name }}" value="{{ $client->name }}">{{ $client->name }}</option>
+        @endforeach
+    </select>
+</div>
+
+<div class="form-group">
     {!! Form::label('room','Room:') !!}
     <select class="selectpicker form-control" data-live-search="true"
             title="" name="room_id">
