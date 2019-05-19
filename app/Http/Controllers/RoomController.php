@@ -32,6 +32,7 @@ class RoomController extends Controller
             'floor' => 'required',
             'type' => 'required',
             'beds' => 'required',
+            'image'=> 'required', //new field
             'price' => 'required | numeric'
         ]);
 
@@ -63,6 +64,21 @@ class RoomController extends Controller
             'beds' => 'required',
             'price' => 'required | numeric'
         ]);
+		
+		 // Check if there is any image,
+        if ($request->hasFile('image')) {
+            // Check if file exists
+            if (file_exists(public_path('uploads/') . $client->image)) {
+                // Delete an old image
+                unlink(public_path('uploads/') . $client->image);
+            }
+
+            // Get and Upload new image
+            $image = $request->image;
+            $image->move("uploads", $image->getClientOriginalName());
+
+            $client->image = $request->image->getClientOriginalName();
+        }
 
         $room = Room::find($id);
         $room->update($request->all());

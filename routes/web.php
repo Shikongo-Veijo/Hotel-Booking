@@ -37,8 +37,26 @@
 	
 	// Email related routes
 	Route::get('mail/send', 'MailController@send');
+	
+	
 
-	//Contact Us Form
+
+Route::get('/welcome', function () {
+    return view('welcome');
+});
+
+Route::get('/uploadfile', 'UploadfileController@index');
+Route::post('/uploadfile', 'UploadfileController@upload');
+//routes for the event controller
+Route::get('event/add','EventController@createEvent');
+Route::post('event/add','EventController@store');
+Route::get('event','EventController@calendar');
+//Contact Us Form
    Route::get('contact', 'PagesController@getContact');
    Route::post('contact', 'PagesController@postContact');
 
+
+
+?>
+
+	
