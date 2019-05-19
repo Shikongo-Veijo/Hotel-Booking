@@ -1,14 +1,15 @@
-<div class="form-group">
+<!--  <div class="form-group">
     {!! Form::label('name','Client:') !!}
     <select class="selectpicker form-control" data-live-search="true" title="" name="client_id">
         @foreach ($clients as $client)
             <option data-subtext="{{ $client->name }}" value="{{ $client->id }}">Client ID:{{ $client->id }}</option>
         @endforeach
     </select>
-</div>
+</div>  -->
+
 <div class="form-group">
     {!! Form::label('name','Name:') !!}
-    <select class="selectpicker form-control" data-live-search="true" title="" name="client_id">
+    <select class="selectpicker form-control" data-live-search="true" title="" name="name">
         @foreach ($clients as $client)
             <option data-subtext="{{ $client->name }}" value="{{ $client->name }}">{{ $client->name }}</option>
         @endforeach
