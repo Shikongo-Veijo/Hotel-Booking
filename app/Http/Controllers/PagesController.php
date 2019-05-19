@@ -43,7 +43,7 @@ class PagesController extends Controller {
 		$data = array(
 			'email' => $request->email,
 			'subject' => $request->subject,
-			'bodyMessage' => $request->message
+			'bodyMessage' => $request->message,
 			);
 
 /*		Mail::send('mails.contact', $data, function($message) use ($data){
@@ -52,10 +52,11 @@ class PagesController extends Controller {
 			$message->subject($data['subject']);*/
 
 
-        Mail::send('mails.bConfirm', $data, function($message) use ($data){
+        Mail::send('mails.contact', $data, function($message) use ($data){
             $message->from('Larahotelbooking@gmail.com');
             $message->to($data['email']);
-            $message->subject('Booking');
+			$message->subject('Booking');
+			$rand = rand(10,100);
         });
 
 

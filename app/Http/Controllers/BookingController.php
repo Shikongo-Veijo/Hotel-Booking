@@ -35,7 +35,7 @@ class BookingController extends Controller
     {
         // Validate the Form
         $request->validate([
-            'client_id' => 'required',
+            //'client_id' => 'required',
             'room_id' => 'required',
             'start_date' => 'required',
             'end_date' => 'required',
@@ -44,6 +44,7 @@ class BookingController extends Controller
         // Save into Database
         Booking::create([
             'client_id' => $request->client_id,
+            'name' => $request->name,
             'room_id' => $request->room_id,
             'user_id' => auth()->user()->id,
             'start_date' => $request->start_date,
